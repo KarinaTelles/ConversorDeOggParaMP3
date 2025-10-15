@@ -8,18 +8,19 @@ Converta rapidamente seus áudios do WhatsApp (.ogg) para .mp3 com este script P
 
 * Abra o terminal na pasta do script.
 
-### Execute:
+## Execute:
 
-python converter.py
+* python converter.py
 
+* Informe o caminho da pasta com seus áudios do WhatsApp (.ogg).
 
-Informe o caminho da pasta com seus áudios do WhatsApp (.ogg).
+  
 Exemplo:
 
-C:\Usuários\Karina\Downloads\Audios
+C:\Usuários\UserName\Downloads\Audios
 
 
-#### Todos os arquivos serão convertidos para .mp3 na mesma pasta.
+## Todos os arquivos serão convertidos para .mp3 na mesma pasta.
 
 Funcionalidades:
 
@@ -31,14 +32,14 @@ Funcionalidades:
 
 * Sobrescreve arquivos existentes com o mesmo nome
 
-##### Pré-requisitos
+## Pré-requisitos
 
 Python 3.x
 
 FFmpeg
  instalado e no PATH
 
-###### Instalação rápida do FFmpeg:
+## Instalação rápida do FFmpeg:
 
 Windows:
 
@@ -55,11 +56,8 @@ Linux (Debian/Ubuntu):
 * sudo apt update
 * sudo apt install ffmpeg
 
-###### Observações
+## Observações
 
 * Certifique-se de que a pasta contém arquivos .ogg.
 
 * Arquivos existentes com o mesmo nome serão sobrescritos.
-Certifique-se de que a pasta contém arquivos .ogg.
-
-Arquivos existentes com o mesmo nome serão sobresc
