@@ -23,7 +23,6 @@ def converter_ogg_para_mp3(pasta):
         subprocess.run(comando, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
     print("✅ Conversão concluída!")
 
-# --- usar a pasta atual (ou mude o caminho aqui)
 if __name__ == "__main__":
     pasta_entrada = input("Digite o caminho da pasta com os áudios do WhatsApp: ").strip()
     converter_ogg_para_mp3(pasta_entrada)
