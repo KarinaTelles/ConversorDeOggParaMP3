@@ -61,3 +61,8 @@ Linux (Debian/Ubuntu):
 * Certifique-se de que a pasta contém arquivos .ogg.
 
 * Arquivos existentes com o mesmo nome serão sobrescritos.
+
+## Modo Gráfico (Recomendado)
+
+Execute a versão com interface gráfica:
+python converter_gui.py
