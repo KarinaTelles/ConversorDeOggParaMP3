@@ -1,174 +1,138 @@
-# 🎵 Conversor de Áudio WhatsApp
+# 🎵 Conversor de Áudio WhatsApp - Guia de Instalação
 
-Converta rapidamente seus áudios do WhatsApp (.ogg) para .mp3
-
-## 📥 Download Rápido (Para Usuários)
-
-**Versão Executável (Não precisa instalar Python!)**
-
-1. Baixe o executável da seção [Releases](../../releases)
-2. Clique duas vezes no arquivo para abrir
-3. Selecione a pasta com seus áudios
-4. Clique em "Converter para MP3"
-5. Pronto! ✓
-
-> ⚠️ **Importante:** Você ainda precisa ter o FFmpeg instalado no seu computador.
-
-### Como instalar o FFmpeg:
-
-**Windows:**
-```bash
-# Usando Chocolatey
-choco install ffmpeg
-
-# Ou baixe em: https://ffmpeg.org/download.html
-```
-
-**macOS:**
-```bash
-brew install ffmpeg
-```
-
-**Linux (Ubuntu/Debian):**
-```bash
-sudo apt update
-sudo apt install ffmpeg
-```
+## 📌 O que você precisa fazer no PC do cliente:
 
 ---
 
-## 👨‍💻 Para Desenvolvedores
+## PASSO 1: Levar o Executável
 
-### Método 1: Executar com Python (Modo Gráfico)
+1. Pegue o arquivo `ConversorAudioWhatsApp.exe` da pasta:
+   ```
+   C:\DEV\ConversorDEOggParaMP3\dist\ConversorAudioWhatsApp.exe
+   ```
 
-**Requisitos:**
-- Python 3.7+
-- FFmpeg instalado
+2. Copie para o PC do cliente (use pendrive, nuvem, etc.)
 
-**Passo a passo:**
-
-1. Clone o repositório:
-```bash
-git clone https://github.com/KarinaTelles/ConversorDeOggParaMP3.git
-cd ConversorDeOggParaMP3
-```
-
-2. Execute a interface gráfica:
-```bash
-python converter_gui.py
-```
-
-### Método 2: Criar seu próprio executável
-
-**Gerar o executável automaticamente:**
-
-1. Execute o script de build:
-```bash
-python build_exe.py
-```
-
-2. O script vai:
-   - Verificar se você tem o PyInstaller (se não tiver, ele instala)
-   - Criar o executável
-   - Colocar na pasta `dist/`
-   - Limpar arquivos temporários (opcional)
-
-3. O executável estará em: `dist/ConversorAudioWhatsApp.exe` (Windows) ou `dist/ConversorAudioWhatsApp` (Mac/Linux)
-
-**Criar executável manualmente:**
-
-```bash
-# Instalar PyInstaller
-pip install pyinstaller
-
-# Gerar executável
-pyinstaller --onefile --windowed --name=ConversorAudioWhatsApp converter_gui.py
-
-# O executável estará em dist/
-```
-
-### Método 3: Usar via linha de comando (Modo Original)
-
-```bash
-python converter_ogg_mp3.py
-```
+3. Coloque em uma pasta fácil de acessar, exemplo:
+   ```
+   C:\Programas\ConversorAudio\
+   ```
 
 ---
 
-## 📋 Funcionalidades
+## PASSO 2: Instalar o FFmpeg no PC do Cliente
 
-✅ Interface gráfica intuitiva  
-✅ Conversão em lote de múltiplos arquivos  
-✅ Barra de progresso em tempo real  
-✅ Detecção automática de arquivos .ogg  
-✅ Qualidade de áudio ajustada para 128 kbps  
-✅ Mantém o nome original dos arquivos  
-✅ Verifica se FFmpeg está instalado  
+### Método Rápido (5 minutos):
 
----
+1. **Abra o PowerShell como Administrador**
+   - Clique direito no menu Iniciar
+   - Selecione "Terminal (Admin)" ou "PowerShell (Admin)"
 
-## 🖼️ Capturas de Tela
+2. **Cole este comando** e aperte Enter:
+   ```powershell
+   Set-ExecutionPolicy Bypass -Scope Process -Force; [System.Net.ServicePointManager]::SecurityProtocol = [System.Net.ServicePointManager]::SecurityProtocol -bor 3072; iex ((New-Object System.Net.WebClient).DownloadString('https://community.chocolatey.org/install.ps1'))
+   ```
+   *(Isso instala o Chocolatey - aguarde 1-2 minutos)*
 
-*[Adicione screenshots da interface aqui]*
+3. **Cole este comando** e aperte Enter:
+   ```powershell
+   choco install ffmpeg -y
+   ```
+   *(Isso instala o FFmpeg - aguarde 2-3 minutos)*
 
----
-
-## ❓ Problemas Comuns
-
-### "FFmpeg não encontrado"
-- Certifique-se de que o FFmpeg está instalado
-- No Windows, verifique se está no PATH do sistema
-- Reinicie o terminal/computador após instalar
-
-### "Nenhum arquivo .ogg encontrado"
-- Verifique se está selecionando a pasta correta
-- Os arquivos devem ter extensão `.ogg`
-- Verifique se você tem permissão para ler a pasta
-
-### O executável não abre
-- Tente executar como administrador (Windows)
-- Verifique seu antivírus (pode estar bloqueando)
-- Certifique-se de que tem o FFmpeg instalado
+4. **REINICIE O COMPUTADOR** (obrigatório!)
 
 ---
 
-## 📦 Estrutura do Projeto
+## PASSO 3: Verificar se Funcionou
+
+1. Abra o Prompt de Comando (Win + R, digite `cmd`, Enter)
+
+2. Digite:
+   ```
+   ffmpeg -version
+   ```
+
+3. **Se aparecer a versão do FFmpeg = Tudo certo! ✅**
+
+4. **Se der erro = FFmpeg não instalou, tente de novo**
+
+---
+
+## PASSO 4: Testar o Programa
+
+1. Clique duas vezes em `ConversorAudioWhatsApp.exe`
+
+2. Se não abrir:
+   - Clique direito > "Executar como Administrador"
+
+3. Clique em "Selecionar Pasta"
+
+4. Escolha uma pasta com arquivos .ogg
+
+5. Clique em "Converter para MP3"
+
+6. **Se funcionar = Instalação completa! 🎉**
+
+---
+
+## 🆘 Se Der Problema:
+
+### FFmpeg não instalou?
+1. Reinicie o computador
+2. Tente instalar de novo
+3. Execute os comandos como Administrador
+
+### Programa não abre?
+1. Execute como Administrador (clique direito no .exe)
+2. Desative temporariamente o antivírus
+3. Tente em outro PC para confirmar que o .exe está ok
+
+### Nenhum arquivo .ogg encontrado?
+1. Certifique-se que os arquivos são realmente .ogg
+2. Verifique se está na pasta correta
+3. No Explorador de Arquivos > Exibir > Marcar "Extensões de nomes de arquivos"
+
+---
+
+## 📝 Resumo Ultra-Rápido:
 
 ```
-ConversorDeOggParaMP3/
-│
-├── converter_gui.py          # Interface gráfica (principal)
-├── converter_ogg_mp3.py       # Versão linha de comando
-├── build_exe.py               # Script para gerar executável
-├── converter.spec             # Configuração PyInstaller
-└── README.md                  # Este arquivo
+1. Leve o .exe para o PC do cliente
+2. Instale FFmpeg (PowerShell Admin):
+   - Instalar Chocolatey (comando 1)
+   - Instalar FFmpeg (comando 2)
+   - Reiniciar PC
+3. Testar: ffmpeg -version
+4. Abrir o programa e testar conversão
 ```
 
----
-
-## 🤝 Contribuindo
-
-Contribuições são bem-vindas! Sinta-se à vontade para:
-
-1. Fazer um Fork do projeto
-2. Criar uma branch para sua feature (`git checkout -b feature/MinhaFeature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona MinhaFeature'`)
-4. Push para a branch (`git push origin feature/MinhaFeature`)
-5. Abrir um Pull Request
+**Tempo total: 10-15 minutos**
 
 ---
 
-## 📝 Licença
+## 💾 Onde Encontrar os Áudios do WhatsApp?
 
-Este projeto é de código aberto e está disponível para uso livre.
+Se o cliente perguntar onde estão os áudios:
+
+```
+C:\Users\[NOME]\AppData\Roaming\WhatsApp\Media\WhatsApp Voice Notes
+```
+
+Ou na pasta Downloads se foram salvos do WhatsApp Web.
 
 ---
 
-## Suporte
+## ✅ Checklist Final:
 
-Se encontrar algum problema ou tiver sugestões:
+Antes de sair:
 
-- Entre em contato através do GitHub
+- [ ] FFmpeg instalado (`ffmpeg -version` funciona)
+- [ ] Programa abre
+- [ ] Conversão funciona com arquivo teste
+- [ ] Cliente sabe usar (selecionar pasta > converter)
+- [ ] Cliente sabe onde ficam os arquivos convertidos (mesma pasta)
 
+---
 
-**Desenvolvido por Karina Telles (https://github.com/KarinaTelles)**
+**Pronto! Isso é tudo que você precisa lembrar! 🚀**
